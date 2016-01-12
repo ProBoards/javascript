@@ -1318,7 +1318,7 @@ Other Style Guides
     }
     ```
 
-  - [16.2](#16.2) <a name='16.2'></a> If you're using multi-line blocks with `if` and `else`, put `else` on the same line as your
+  - [16.2](#16.2) <a name='16.2'></a> If you're using multi-line blocks with `if` and `else`, put `else` on the next line down from your
     `if` block's closing brace.
 
     eslint rules: [`brace-style`](http://eslint.org/docs/rules/brace-style.html).
@@ -1328,16 +1328,27 @@ Other Style Guides
     if (test) {
       thing1();
       thing2();
-    }
-    else {
+    } else {
       thing3();
     }
-
+    
+    // bad
+    if (test) 
+    {
+      thing1();
+      thing2();
+    } 
+    else 
+    {
+      thing3();
+    }
+    
     // good
     if (test) {
       thing1();
       thing2();
-    } else {
+    }
+    else {
       thing3();
     }
     ```
@@ -1451,14 +1462,14 @@ Other Style Guides
 
 ## Whitespace
 
-  - [18.1](#18.1) <a name='18.1'></a> Use soft tabs set to 2 spaces.
+  - [18.1](#18.1) <a name='18.1'></a> Use soft tabs set to 4 spaces.
 
     eslint rules: [`indent`](http://eslint.org/docs/rules/indent.html).
 
     ```javascript
     // bad
     function () {
-    ∙∙∙∙const name;
+    ∙∙const name;
     }
 
     // bad
@@ -1468,7 +1479,7 @@ Other Style Guides
 
     // good
     function () {
-    ∙∙const name;
+    ∙∙∙∙const name;
     }
     ```
 
